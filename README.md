@@ -1,4 +1,4 @@
-# Vireo — creator commerce landing page
+# AiraDigital — creator commerce landing page
 
 A production-ready Next.js recreation of a modern dark-themed creator-marketing
 landing page. Every piece of branding, copy and imagery is **placeholder

@@ -1,6 +1,6 @@
 import { FlashIcon } from "@/components/graphics/Icons";
 import Reveal from "@/components/ui/Reveal";
-import { stats } from "@/lib/site";
+import { stats, statsSection } from "@/lib/site";
 
 export default function Stats() {
   return (
@@ -19,9 +19,7 @@ export default function Stats() {
 
         <Reveal delay={120}>
           <h3 className="ut-section-sub-head mx-auto max-w-4xl text-white/85">
-            Vireo sets a new standard — helping brands discover curated creators, engage
-            meaningfully, track performance, and scale on an intuitive, analytics-driven
-            platform that removes operational friction and delivers measurable ROI.
+            {statsSection.sub}
           </h3>
         </Reveal>
 

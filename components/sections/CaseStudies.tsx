@@ -1,7 +1,7 @@
 import Artwork from "@/components/graphics/Artwork";
 import Reveal from "@/components/ui/Reveal";
 import { Scribble } from "@/components/ui/Scribble";
-import { caseStudies } from "@/lib/site";
+import { caseStudies, caseStudiesSection } from "@/lib/site";
 
 const TONES = {
   pink: "bg-site-pink",
@@ -18,7 +18,7 @@ export default function CaseStudies() {
             See the <Scribble variant="double">results</Scribble> for yourself
           </h2>
           <h3 className="ut-section-sub-head text-white/85">
-            Top brands choose Vireo to run creator campaigns that deliver real, repeatable wins.
+            {caseStudiesSection.sub}
           </h3>
         </div>
       </Reveal>

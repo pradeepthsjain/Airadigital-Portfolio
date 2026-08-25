@@ -5,21 +5,21 @@
  */
 
 export const site = {
-  name: "Vireo",
+  name: "AiraDigital",
   tagline: "Creator commerce, unified.",
   description:
-    "Vireo helps brands discover curated creators, run campaigns end-to-end, and track the revenue they actually drive — on one analytics-native platform.",
+    "AiraDigital helps brands discover curated creators, run campaigns end-to-end, and track the revenue they actually drive — on one analytics-native platform.",
   email: "hello@example.com",
   bookingUrl: "#book",
   creatorUrl: "#creators-signup",
   url: "https://example.com",
   year: 2025,
-  legalName: "Vireo Labs Inc.",
+  legalName: "AiraDigital",
 } as const;
 
 export const announcement = {
   lead: "Series A",
-  text: "Vireo closes a $1.5M round to scale creator commerce",
+  text: "AiraDigital closes a $1.5M round to scale creator commerce",
   linkLabel: "Read more",
   href: "#press",
 };
@@ -47,6 +47,10 @@ export const brands = [
   { name: "Orbit Mart", accent: "#c3b1e8" },
 ] as const;
 
+export const statsSection = {
+  sub: "AiraDigital sets a new standard — helping brands discover curated creators, engage meaningfully, track performance, and scale on an intuitive, analytics-driven platform that removes operational friction and delivers measurable ROI.",
+};
+
 export const stats = [
   { value: "250k+", label: "Curated Creators" },
   { value: "300+", label: "Trusted Brand Partners" },
@@ -55,8 +59,8 @@ export const stats = [
 ] as const;
 
 export const powerSection = {
-  heading: "How Vireo powers you?",
-  sub: "With Vireo, brands of every size can turn creators into a proven growth engine.",
+  heading: "How AiraDigital powers you?",
+  sub: "With AiraDigital, brands of every size can turn creators into a proven growth engine.",
 };
 
 /** Sticky stacking cards. `tone` picks the card + artwork panel colours. */
@@ -64,22 +68,26 @@ export const powers = [
   {
     tone: "pink",
     title: "Discover creators\nbuilt for your goals",
-    body: "Use Vireo's data-rich discovery to spot the right creators, assess fit instantly, and choose the people who can champion your brand with real impact.",
+    body: "Use AiraDigital's data-rich discovery to spot the right creators, assess fit instantly, and choose the people who can champion your brand with real impact.",
     art: "discovery",
   },
   {
     tone: "cyan",
     title: "Execute faster\nOperate smarter",
-    body: "Vireo unifies discovery, payouts, analytics, performance tracking and affiliate management — eliminating spreadsheets and scattered tools for a faster creator workflow.",
+    body: "AiraDigital unifies discovery, payouts, analytics, performance tracking and affiliate management — eliminating spreadsheets and scattered tools for a faster creator workflow.",
     art: "workflow",
   },
   {
     tone: "orange",
     title: "Complete clarity\nreal-time",
-    body: "Understand what's working with live insight across creators, campaigns and overall programme impact, all powered by Vireo's intelligent analytics.",
+    body: "Understand what's working with live insight across creators, campaigns and overall programme impact, all powered by AiraDigital's intelligent analytics.",
     art: "analytics",
   },
 ] as const;
+
+export const caseStudiesSection = {
+  sub: "Top brands choose AiraDigital to run creator campaigns that deliver real, repeatable wins.",
+};
 
 export const caseStudies = [
   {
@@ -109,7 +117,7 @@ export const habitsSection = {
   headBefore: "Your buyers have changed—has your",
   headAccent: "marketing",
   headAfter: "kept up?",
-  sub: "People trust creators over polished ads; Vireo turns creator content into measurable growth.",
+  sub: "People trust creators over polished ads; AiraDigital turns creator content into measurable growth.",
 };
 
 export const habits = [
@@ -117,7 +125,7 @@ export const habits = [
     icon: "search",
     tone: "cyan",
     title: "Creators are the new storefront",
-    body: "Gen Z and Millennials open social before they open a search bar. Vireo connects you with creators who get your brand seen by the right audience, at the right moment.",
+    body: "Gen Z and Millennials open social before they open a search bar. AiraDigital connects you with creators who get your brand seen by the right audience, at the right moment.",
     art: "storefront",
   },
   {
@@ -146,7 +154,7 @@ export const habits = [
 export const creatorsSection = {
   headAccent: "Creators",
   headAfter: "who go beyond content",
-  sub: "People drive trust, not ads. Vireo powers growth with creator content that actually shifts decisions.",
+  sub: "People drive trust, not ads. AiraDigital powers growth with creator content that actually shifts decisions.",
 };
 
 /**
@@ -168,7 +176,7 @@ export const creators = [
 
 export const faqSection = {
   heading: "Content engine? Easier said than built",
-  sub: "AI and creators make it effortless with Vireo.",
+  sub: "AI and creators make it effortless with AiraDigital.",
 };
 
 export const faqs = [
@@ -182,10 +190,10 @@ export const faqs = [
   },
   {
     q: "How do creator partnerships work?",
-    a: "You set the budget, deliverables and usage rights. Vireo handles outreach, negotiation, contracting and consolidated payouts, so you approve work instead of chasing invoices.",
+    a: "You set the budget, deliverables and usage rights. AiraDigital handles outreach, negotiation, contracting and consolidated payouts, so you approve work instead of chasing invoices.",
   },
   {
-    q: "Why choose Vireo?",
+    q: "Why choose AiraDigital?",
     a: "Discovery, execution, analytics and payments live in one system. No spreadsheets, no scattered tools, and no guessing which creator actually drove the revenue.",
   },
   {
@@ -200,7 +208,7 @@ export const founder = {
   socialLabel: "Maya Rao",
   socialUrl: "#linkedin",
   body: [
-    "Hey, I'm Maya — founder, tennis obsessive, former chess champ, and someone who cannot resist a good brand problem. While building a creator ecosystem I kept running into the same gaps brands struggled with, so I built Vireo: a clean, intelligent way to discover creators, execute faster and track what actually drives sales.",
+    "Hey, I'm Maya — founder, tennis obsessive, former chess champ, and someone who cannot resist a good brand problem. While building a creator ecosystem I kept running into the same gaps brands struggled with, so I built AiraDigital: a clean, intelligent way to discover creators, execute faster and track what actually drives sales.",
     "Explore the platform, click around… and if you're here to scale, you'll feel right at home. 🎾",
   ],
 };
