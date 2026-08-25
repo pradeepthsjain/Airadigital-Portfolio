@@ -1,0 +1,263 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   Design tokens
+   Dark editorial palette: near-black canvas, acid-yellow CTA, and a
+   rotating set of saturated "campaign" colours (purple / pink / orange /
+   cyan) each paired with a pastel tint used for artwork panels.
+------------------------------------------------------------------ */
+@theme {
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+
+  --color-site-theme-black: #0a0a0a;
+  --color-site-black1: #121212;
+  --color-site-black: #1a1a1a;
+  --color-site-gray: #333333;
+  --color-site-white: #ffffff;
+
+  --color-site-yellow: #e2d939;
+  --color-site-yellow-light: #ebe57a;
+
+  --color-site-theme-purple: #2d1e48;
+  --color-site-purple: #4f347f;
+
+  --color-site-pink: #e01569;
+  --color-site-pink-light: #f6a2c5;
+
+  --color-site-orange: #de4612;
+  --color-site-orange-light: #f5b8a3;
+
+  --color-site-cyan: #52b1b7;
+  --color-site-cyan-light: #b7dee1;
+
+  --radius-3xl: 1.5rem;
+  --radius-4xl: 2rem;
+
+  --animate-marquee: marquee 20s linear infinite;
+  --animate-heartbeat: heartbeat 3s ease-in-out infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-reel: reel 18s linear infinite;
+  --animate-spin-slow: spin 26s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.08);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+/* Vertical auto-scroll for the faux reel inside the phone mockup. */
+@keyframes reel {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* Floating "likes" drifting up the side of the hero phone. */
+@keyframes heart-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.6);
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(-16px) scale(1);
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-130px) scale(0.85);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Base
+------------------------------------------------------------------ */
+@layer base {
+  html {
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-site-theme-black);
+    color: var(--color-site-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-site-yellow);
+    color: var(--color-site-theme-black);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-site-yellow);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Composed utilities
+------------------------------------------------------------------ */
+@utility ut-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: calc(var(--spacing) * 4);
+}
+
+@utility ut-section-head {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-site-white);
+
+  @media (min-width: 80rem) {
+    font-size: 60px;
+    font-weight: 700;
+  }
+}
+
+@utility ut-section-sub-head {
+  margin-top: calc(var(--spacing) * 5);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-site-white);
+
+  @media (min-width: 48rem) {
+    margin-top: calc(var(--spacing) * 8);
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+@utility hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* 3D flip-card primitives (used by the creator grid). */
+@utility perspective {
+  perspective: 1200px;
+}
+
+@utility transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+@utility backface-hidden {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+@utility flip-y {
+  transform: rotateY(180deg);
+}
+
+/* Horizontal snap rail on mobile, real grid from `lg` up. */
+@utility creators-rail {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+
+  & > * {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    min-width: 78%;
+  }
+
+  @media (min-width: 64rem) {
+    display: grid;
+    overflow: visible;
+
+    & > * {
+      min-width: auto;
+    }
+  }
+}
+
+/* ------------------------------------------------------------------
+   Scroll reveal — driven by <Reveal /> toggling [data-visible].
+------------------------------------------------------------------ */
+.reveal {
+  opacity: 0;
+}
+
+.reveal[data-visible="true"] {
+  animation: fade-up 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal[data-visible="true"] {
+    opacity: 1;
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
