@@ -27,6 +27,7 @@ export const announcement = {
 export const nav = [
   { label: "Features", target: "features" },
   { label: "Case Studies", target: "case-studies" },
+  { label: "Why Us", target: "why-us" },
   { label: "FAQs", target: "faqs" },
 ] as const;
 
@@ -38,13 +39,25 @@ export const hero = {
   cta: "Get in touch",
 };
 
-/** Placeholder partner wordmarks rendered as SVG in <BrandMark />. */
+/**
+ * Partner logos for the "Trusted By" marquee. Each file in /public/brands is a
+ * transparent PNG of the same fixed height with the mark optically size-matched
+ * to the rest of the set, so a single CSS height renders them all evenly.
+ */
 export const brands = [
-  { name: "Northwind", accent: "#f6a2c5" },
-  { name: "Lumen", accent: "#b7dee1" },
-  { name: "Kettle&Co", accent: "#f5b8a3" },
-  { name: "Havenly", accent: "#ebe57a" },
-  { name: "Orbit Mart", accent: "#c3b1e8" },
+  { name: "A2B Veg. Restaurant", src: "/brands/a2b.png", w: 219, h: 176 },
+  { name: "Nandhana Palace", src: "/brands/nandhana.png", w: 188, h: 176 },
+  { name: "Nandini", src: "/brands/nandini.png", w: 189, h: 176 },
+  { name: "Government of Karnataka", src: "/brands/karnataka.png", w: 188, h: 176 },
+  { name: "Parachute", src: "/brands/parachute.png", w: 222, h: 176 },
+  { name: "Marico", src: "/brands/marico.png", w: 217, h: 176 },
+  { name: "Vilvah Store", src: "/brands/vilvah.png", w: 188, h: 176 },
+  { name: "Traya", src: "/brands/traya.png", w: 298, h: 176 },
+  { name: "Deconstruct", src: "/brands/deconstruct.png", w: 205, h: 176 },
+  { name: "SharkNinja", src: "/brands/sharkninja.png", w: 341, h: 176 },
+  { name: "Sangeetha Mobiles", src: "/brands/sangeetha.png", w: 293, h: 176 },
+  { name: "Unilet", src: "/brands/unilet.png", w: 266, h: 176 },
+  { name: "Q Experiences", src: "/brands/qexperiences.png", w: 188, h: 176 },
 ] as const;
 
 export const statsSection = {
@@ -52,35 +65,47 @@ export const statsSection = {
 };
 
 export const stats = [
-  { value: "250k+", label: "Curated Creators" },
+  { value: "100,000+", label: "Creators Across India" },
   { value: "300+", label: "Trusted Brand Partners" },
   { value: "1.4 Billion+", label: "Massive Reach Monthly" },
   { value: "$18M+", label: "Sales Driven Monthly" },
 ] as const;
 
+/** Two positioning claims that sit directly beneath the stat tiles. */
+export const networkPoints = [
+  {
+    title: "India's Premier Influencer Network",
+    body: "Instant access to 100,000+ creators across every region, niche, and language in India.",
+  },
+  {
+    title: "Driven by Data, Backed by ROI",
+    body: "We match your brand with high-performing influencers using deep creator insights and audience demographics for maximum campaign performance.",
+  },
+] as const;
+
 export const powerSection = {
-  heading: "How AiraDigital powers you?",
-  sub: "With AiraDigital, brands of every size can turn creators into a proven growth engine.",
+  heading: "Our Core Capabilities",
+  sub: "From hyper-targeted matching through full campaign execution to final ROI reporting.",
 };
 
 /** Sticky stacking cards. `tone` picks the card + artwork panel colours. */
 export const powers = [
   {
     tone: "pink",
-    title: "Discover creators\nbuilt for your goals",
-    body: "Use AiraDigital's data-rich discovery to spot the right creators, assess fit instantly, and choose the people who can champion your brand with real impact.",
+    title: "Hyper-Targeted\nMatching",
+    body: "AI- and insight-driven creator discovery that guarantees brand-safety and real engagement.",
     art: "discovery",
   },
   {
     tone: "cyan",
-    title: "Execute faster\nOperate smarter",
-    body: "AiraDigital unifies discovery, payouts, analytics, performance tracking and affiliate management — eliminating spreadsheets and scattered tools for a faster creator workflow.",
+    title: "End-to-End Campaign\nManagement",
+    body: "From brief and influencer onboarding to creative direction, editing, and final ROI reporting.",
     art: "workflow",
   },
   {
     tone: "orange",
-    title: "Complete clarity\nreal-time",
-    body: "Understand what's working with live insight across creators, campaigns and overall programme impact, all powered by AiraDigital's intelligent analytics.",
+    title: "Scalable\nReach",
+    body: "Whether you need 5 micro-influencers or 100+ regional creators simultaneously, we handle the logistics seamlessly.",
     art: "analytics",
   },
 ] as const;
@@ -110,6 +135,33 @@ export const caseStudies = [
     body: "100 creators rapidly amplified a haircare range with a high-impact, two-day awareness burst across short-form video.",
     metric: "2 day burst",
     art: "bloom",
+  },
+] as const;
+
+export const whyUsSection = {
+  headBefore: "Why work",
+  headAccent: "with us",
+  sub: "Not a marketplace and not a middleman — a team that owns the narrative, the edit and the execution end to end.",
+};
+
+export const whyUs = [
+  {
+    icon: "handshake",
+    tone: "pink",
+    title: "Value & Intent First",
+    body: "We don't just generate content; we craft intentional narratives that resonate with audiences and convert viewers into loyal customers.",
+  },
+  {
+    icon: "film",
+    tone: "cyan",
+    title: "In-House Post-Production",
+    body: "Our full-time, in-house team of video editors and strategists ensures top-tier visual quality, fast turnarounds, and seamless brand alignment.",
+  },
+  {
+    icon: "chart",
+    tone: "orange",
+    title: "Proven Scale & Execution",
+    body: "Trusted to execute at scale — from hyper-targeted boutique campaigns to delivering 100+ vetted creators for large-scale national government initiatives.",
   },
 ] as const;
 

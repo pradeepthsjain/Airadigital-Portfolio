@@ -1,6 +1,6 @@
 import { FlashIcon } from "@/components/graphics/Icons";
 import Reveal from "@/components/ui/Reveal";
-import { stats, statsSection } from "@/lib/site";
+import { networkPoints, stats, statsSection } from "@/lib/site";
 
 export default function Stats() {
   return (
@@ -33,6 +33,17 @@ export default function Stats() {
                 <p className="text-site-white group-hover:text-site-black1 mt-5 text-center text-base transition-all duration-300 ease-in-out xl:text-lg">
                   {s.label}
                 </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+
+        <div className="mt-4 grid gap-4 md:grid-cols-2 xl:mt-6 xl:gap-6">
+          {networkPoints.map((n, i) => (
+            <Reveal key={n.title} delay={i * 90}>
+              <div className="border-site-gray h-full rounded-3xl border p-6 xl:rounded-4xl xl:p-8">
+                <p className="text-site-yellow-light text-xl font-semibold xl:text-2xl">{n.title}</p>
+                <p className="mt-3 text-sm leading-relaxed text-white/85 xl:text-base">{n.body}</p>
               </div>
             </Reveal>
           ))}

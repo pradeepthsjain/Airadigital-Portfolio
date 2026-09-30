@@ -33,7 +33,7 @@
   --radius-3xl: 1.5rem;
   --radius-4xl: 2rem;
 
-  --animate-marquee: marquee 20s linear infinite;
+  --animate-marquee: marquee 40s linear infinite;
   --animate-heartbeat: heartbeat 3s ease-in-out infinite;
   --animate-float: float 6s ease-in-out infinite;
   --animate-reel: reel 18s linear infinite;

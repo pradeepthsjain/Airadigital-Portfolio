@@ -45,6 +45,15 @@ export function HandshakeIcon(p: Props) {
   );
 }
 
+export function FilmIcon(p: Props) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...base} {...p}>
+      <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" />
+      <path d="M7.5 4.5v15M16.5 4.5v15M2.5 12h19M2.5 8.2h5M2.5 15.8h5M16.5 8.2h5M16.5 15.8h5" />
+    </svg>
+  );
+}
+
 export function ArrowIcon(p: Props) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...base} {...p}>
@@ -92,6 +101,12 @@ export const HABIT_ICONS = {
   bag: BagIcon,
   chart: ChartIcon,
   handshake: HandshakeIcon,
+};
+
+export const WHY_ICONS = {
+  handshake: HandshakeIcon,
+  film: FilmIcon,
+  chart: ChartIcon,
 };
 
 export const SOCIAL_ICONS = {
