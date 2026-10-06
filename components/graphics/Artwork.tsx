@@ -11,9 +11,6 @@ type Variant =
   | "discovery"
   | "workflow"
   | "analytics"
-  | "device"
-  | "bottle"
-  | "bloom"
   | "storefront"
   | "connection"
   | "roi"
@@ -129,95 +126,6 @@ function Analytics() {
   );
 }
 
-/* -------------------------------------------------------------- case studies */
-
-function CaseFrame({ tint, children }: { tint: string; children: React.ReactNode }) {
-  return (
-    <svg viewBox="0 0 400 290" className="h-full w-full" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <linearGradient id={`cs${tint.slice(1)}`} x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor={tint} stopOpacity="0.55" />
-          <stop offset="100%" stopColor={tint} stopOpacity="0.05" />
-        </linearGradient>
-      </defs>
-      <rect width="400" height="290" fill={`url(#cs${tint.slice(1)})`} />
-      {children}
-    </svg>
-  );
-}
-
-function Device() {
-  return (
-    <CaseFrame tint="#ffffff">
-      <circle cx="316" cy="66" r="52" fill="#fff" opacity="0.2" />
-      <g transform="rotate(-9 150 145)">
-        <rect x="104" y="58" width="96" height="180" rx="18" fill="#0a0a0a" opacity="0.9" />
-        <rect x="111" y="66" width="82" height="164" rx="13" fill="#fff" opacity="0.9" />
-        <rect x="111" y="66" width="82" height="72" rx="13" fill="#E01569" opacity="0.55" />
-        <circle cx="152" cy="102" r="17" fill="#fff" opacity="0.85" />
-        {[0, 1, 2].map((i) => (
-          <rect key={i} x="121" y={152 + i * 18} width={62 - i * 14} height="8" rx="4" fill="#0a0a0a" opacity="0.2" />
-        ))}
-      </g>
-      <g transform="rotate(11 268 160)">
-        <rect x="222" y="90" width="92" height="172" rx="18" fill="#0a0a0a" opacity="0.75" />
-        <rect x="229" y="98" width="78" height="156" rx="13" fill="#fff" opacity="0.85" />
-        <rect x="229" y="98" width="78" height="94" rx="13" fill="#E2D939" opacity="0.7" />
-        <path d="M252 152h32M268 136v32" stroke="#0a0a0a" strokeWidth="5" strokeLinecap="round" opacity="0.5" />
-      </g>
-    </CaseFrame>
-  );
-}
-
-function Bottle() {
-  return (
-    <CaseFrame tint="#ffffff">
-      <circle cx="82" cy="80" r="58" fill="#fff" opacity="0.22" />
-      {[0, 1, 2].map((i) => {
-        const x = 118 + i * 78;
-        const h = 150 + (i === 1 ? 26 : 0);
-        return (
-          <g key={i}>
-            <rect x={x} y={250 - h} width="52" height={h} rx="20" fill="#0a0a0a" opacity={0.24 + i * 0.16} />
-            <rect x={x + 16} y={250 - h - 20} width="20" height="24" rx="7" fill="#0a0a0a" opacity={0.5} />
-            <rect x={x + 8} y={250 - h + 42} width="36" height="46" rx="9" fill="#fff" opacity="0.75" />
-            <rect x={x + 15} y={250 - h + 58} width="22" height="6" rx="3" fill="#DE4612" opacity="0.8" />
-            <rect x={x + 15} y={250 - h + 70} width="14" height="5" rx="2.5" fill="#0a0a0a" opacity="0.3" />
-          </g>
-        );
-      })}
-      <ellipse cx="200" cy="256" rx="140" ry="14" fill="#0a0a0a" opacity="0.12" />
-    </CaseFrame>
-  );
-}
-
-function Bloom() {
-  return (
-    <CaseFrame tint="#ffffff">
-      <g opacity="0.9">
-        {Array.from({ length: 8 }).map((_, i) => (
-          <ellipse
-            key={i}
-            cx="200"
-            cy="140"
-            rx="26"
-            ry="76"
-            fill="#EBE57A"
-            opacity="0.32"
-            transform={`rotate(${i * 22.5} 200 140)`}
-          />
-        ))}
-      </g>
-      <circle cx="200" cy="140" r="40" fill="#fff" opacity="0.9" />
-      <circle cx="200" cy="140" r="24" fill="#2D1E48" opacity="0.7" />
-      <path d="M200 180v78" stroke="#fff" strokeWidth="7" strokeLinecap="round" opacity="0.75" />
-      <path d="M200 222c-30 0-46-16-50-40 28-2 46 12 50 40z" fill="#fff" opacity="0.55" />
-    </CaseFrame>
-  );
-}
-
-/* ------------------------------------------------------------ habit vignettes */
-
 function Storefront() {
   return (
     <svg viewBox="0 0 260 320" className="h-full w-full" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -309,9 +217,6 @@ const VARIANTS: Record<Variant, () => React.ReactElement> = {
   discovery: Discovery,
   workflow: Workflow,
   analytics: Analytics,
-  device: Device,
-  bottle: Bottle,
-  bloom: Bloom,
   storefront: Storefront,
   connection: Connection,
   roi: Roi,

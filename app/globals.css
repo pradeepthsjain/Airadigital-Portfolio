@@ -182,54 +182,6 @@
   }
 }
 
-@utility hide-scrollbar {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-/* 3D flip-card primitives (used by the creator grid). */
-@utility perspective {
-  perspective: 1200px;
-}
-
-@utility transform-style-3d {
-  transform-style: preserve-3d;
-}
-
-@utility backface-hidden {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-@utility flip-y {
-  transform: rotateY(180deg);
-}
-
-/* Horizontal snap rail on mobile, real grid from `lg` up. */
-@utility creators-rail {
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-
-  & > * {
-    scroll-snap-align: start;
-    flex-shrink: 0;
-    min-width: 78%;
-  }
-
-  @media (min-width: 64rem) {
-    display: grid;
-    overflow: visible;
-
-    & > * {
-      min-width: auto;
-    }
-  }
-}
-
 /* ------------------------------------------------------------------
    Scroll reveal — driven by <Reveal /> toggling [data-visible].
 ------------------------------------------------------------------ */

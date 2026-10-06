@@ -26,7 +26,6 @@ export const announcement = {
 
 export const nav = [
   { label: "Features", target: "features" },
-  { label: "Case Studies", target: "case-studies" },
   { label: "Why Us", target: "why-us" },
   { label: "FAQs", target: "faqs" },
 ] as const;
@@ -110,34 +109,6 @@ export const powers = [
   },
 ] as const;
 
-export const caseStudiesSection = {
-  sub: "Top brands choose AiraDigital to run creator campaigns that deliver real, repeatable wins.",
-};
-
-export const caseStudies = [
-  {
-    tone: "pink",
-    title: "Fold & Flip Launch",
-    body: "500 creators lifted launch awareness for a flagship handset through impactful, authentic creator storytelling.",
-    metric: "4.2x ROAS",
-    art: "device",
-  },
-  {
-    tone: "orange",
-    title: "Everyday Essentials",
-    body: "A diverse creator roster used honest storytelling to elevate visibility, engagement and brand relevance — driving strong organic awareness.",
-    metric: "38M reach",
-    art: "bottle",
-  },
-  {
-    tone: "purple",
-    title: "Haircare Sprint",
-    body: "100 creators rapidly amplified a haircare range with a high-impact, two-day awareness burst across short-form video.",
-    metric: "2 day burst",
-    art: "bloom",
-  },
-] as const;
-
 export const whyUsSection = {
   headBefore: "Why work",
   headAccent: "with us",
@@ -203,29 +174,6 @@ export const habits = [
   },
 ] as const;
 
-export const creatorsSection = {
-  headAccent: "Creators",
-  headAfter: "who go beyond content",
-  sub: "People drive trust, not ads. AiraDigital powers growth with creator content that actually shifts decisions.",
-};
-
-/**
- * Placeholder creator roster. Portraits are generated locally as SVG from the
- * `seed`, so there are no external image requests and nothing to break.
- */
-export const creators = [
-  { name: "Nadia Perez", handle: "madebynadia", followers: "156K", seed: 3, palette: "peach" },
-  { name: "Simone Reyes", handle: "simone.rey", followers: "174K", seed: 11, palette: "pink" },
-  { name: "Priya Raman", handle: "happyxsoul", followers: "218K", seed: 5, palette: "violet" },
-  { name: "Rowan Patel", handle: "seriouslyrowan", followers: "15.3K", seed: 8, palette: "peach" },
-  { name: "Gemma Cole", handle: "gemmasgoodlife", followers: "559K", seed: 2, palette: "pink" },
-  { name: "Shivani Rao", handle: "thefashionhub", followers: "193K", seed: 14, palette: "peach" },
-  { name: "Sofia Kumar", handle: "sofiamoond", followers: "120K", seed: 6, palette: "peach" },
-  { name: "Amit Sethi", handle: "amit.builds", followers: "239K", seed: 9, palette: "violet" },
-  { name: "Salma Idris", handle: "shystyles", followers: "395K", seed: 1, palette: "pink" },
-  { name: "Priti Banerjee", handle: "pritiplates", followers: "30.3K", seed: 12, palette: "violet" },
-] as const;
-
 export const faqSection = {
   heading: "Content engine? Easier said than built",
   sub: "AI and creators make it effortless with AiraDigital.",
@@ -254,17 +202,6 @@ export const faqs = [
   },
 ] as const;
 
-export const founder = {
-  name: "Maya Rao",
-  role: "Founder & CEO",
-  socialLabel: "Maya Rao",
-  socialUrl: "#linkedin",
-  body: [
-    "Hey, I'm Maya — founder, tennis obsessive, former chess champ, and someone who cannot resist a good brand problem. While building a creator ecosystem I kept running into the same gaps brands struggled with, so I built AiraDigital: a clean, intelligent way to discover creators, execute faster and track what actually drives sales.",
-    "Explore the platform, click around… and if you're here to scale, you'll feel right at home. 🎾",
-  ],
-};
-
 export const finalCta = {
   lines: ["Build smarter.", "Execute faster.", "Grow bigger."],
   button: "Talk to Us",
@@ -273,8 +210,8 @@ export const finalCta = {
 export const footerLinks = {
   primary: [
     { label: "Home", href: "#top" },
-    { label: "Case Studies", target: "case-studies" },
     { label: "Features", target: "features" },
+    { label: "Why Us", target: "why-us" },
     { label: "FAQs", target: "faqs" },
   ],
   legal: [

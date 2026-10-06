@@ -3,12 +3,9 @@ import Hero from "@/components/sections/Hero";
 import TrustedBy from "@/components/sections/TrustedBy";
 import Stats from "@/components/sections/Stats";
 import PowerStack from "@/components/sections/PowerStack";
-import CaseStudies from "@/components/sections/CaseStudies";
 import WhyUs from "@/components/sections/WhyUs";
 import Habits from "@/components/sections/Habits";
-import Creators from "@/components/sections/Creators";
 import Faqs from "@/components/sections/Faqs";
-import Founder from "@/components/sections/Founder";
 import FinalCta from "@/components/sections/FinalCta";
 import Footer from "@/components/sections/Footer";
 
@@ -31,12 +28,9 @@ export default function Page() {
         <TrustedBy />
         <Stats />
         <PowerStack />
-        <CaseStudies />
         <WhyUs />
         <Habits />
-        <Creators />
         <Faqs />
-        <Founder />
         <FinalCta />
       </main>
 
