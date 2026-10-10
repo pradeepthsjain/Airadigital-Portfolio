@@ -9,9 +9,12 @@ export const site = {
   tagline: "Creator commerce, unified.",
   description:
     "AiraDigital helps brands discover curated creators, run campaigns end-to-end, and track the revenue they actually drive — on one analytics-native platform.",
-  email: "hello@example.com",
-  bookingUrl: "#book",
-  creatorUrl: "#creators-signup",
+  email: "admin@airadigi.com",
+  phone: "+91 97407 25577",
+  /** "Book a Call" dials this; every other CTA opens an enquiry email. */
+  callUrl: "tel:+919740725577",
+  enquiryUrl: "mailto:admin@airadigi.com?subject=Brand%20enquiry",
+  creatorUrl: "mailto:admin@airadigi.com?subject=Creator%20sign-up",
   url: "https://example.com",
   year: 2025,
   legalName: "AiraDigital",
@@ -31,8 +34,8 @@ export const nav = [
 ] as const;
 
 export const hero = {
-  titleTop: "Find the right",
-  titleBottom: "creators",
+  titleTop: "Find The Right",
+  titleBottom: "Creators",
   subtitle:
     "End-to-end workflows and zero manual work — from outreach, to approvals, to centralised payouts.",
   cta: "Get in touch",
@@ -64,17 +67,16 @@ export const statsSection = {
 };
 
 export const stats = [
-  { value: "100,000+", label: "Creators Across India" },
-  { value: "300+", label: "Trusted Brand Partners" },
-  { value: "1.4 Billion+", label: "Massive Reach Monthly" },
-  { value: "$18M+", label: "Sales Driven Monthly" },
+  { value: "50,000+", label: "Creators Across India" },
+  { value: "150+", label: "Trusted Brand Partners" },
+  { value: "700 Million+", label: "Massive Reach Monthly" },
 ] as const;
 
 /** Two positioning claims that sit directly beneath the stat tiles. */
 export const networkPoints = [
   {
     title: "India's Premier Influencer Network",
-    body: "Instant access to 100,000+ creators across every region, niche, and language in India.",
+    body: "Instant access to 50,000+ creators across every region, niche, and language in India.",
   },
   {
     title: "Driven by Data, Backed by ROI",

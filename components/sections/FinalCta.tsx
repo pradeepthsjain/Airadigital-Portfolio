@@ -39,7 +39,7 @@ export default function FinalCta() {
         </h2>
 
         <a
-          href={site.bookingUrl}
+          href={site.enquiryUrl}
           className="bg-site-yellow absolute bottom-0 flex h-14 w-48 translate-y-1/2 items-center justify-center rounded-full text-2xl font-semibold text-black transition-transform duration-300 hover:scale-105 md:h-20 md:w-80 md:text-4xl"
         >
           {finalCta.button}

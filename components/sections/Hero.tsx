@@ -30,7 +30,7 @@ export default function Hero() {
 
           <Reveal delay={240}>
             <a
-              href={site.bookingUrl}
+              href={site.enquiryUrl}
               className="bg-site-yellow text-site-theme-black flex w-32 items-center justify-center rounded-full py-2 text-sm font-semibold transition-transform duration-300 hover:scale-105 lg:w-48 lg:py-4 lg:text-lg"
             >
               {hero.cta}

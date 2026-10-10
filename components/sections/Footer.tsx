@@ -16,8 +16,8 @@ export default function Footer() {
       <div className="grid w-full items-start justify-between gap-y-14 xl:grid-cols-[1fr_1fr_auto] xl:gap-x-6">
         {/* brand */}
         <div className="flex w-full flex-col items-start justify-between xl:order-1 xl:w-[80%]">
-          <a href="#top" className="text-3xl xl:text-5xl" aria-label={`${site.name} home`}>
-            <Logo />
+          <a href="#top" className="inline-flex" aria-label={`${site.name} home`}>
+            <Logo className="h-16 w-auto xl:h-20" />
           </a>
           <p className="mt-4 max-w-sm text-base font-medium text-white/70">{site.description}</p>
           <p className="mt-4 text-sm font-medium text-white/60">
@@ -77,8 +77,14 @@ export default function Footer() {
           <p className="text-lg font-medium xl:text-2xl">Any Query?</p>
           <p className="mt-2 text-base xl:text-lg">
             Contact us at{" "}
-            <a className="text-site-yellow hover:underline" href={`mailto:${site.email}`}>
+            <a className="text-site-yellow hover:underline" href={site.enquiryUrl}>
               {site.email}
+            </a>
+          </p>
+          <p className="mt-1 text-base xl:text-lg">
+            Call us on{" "}
+            <a className="text-site-yellow hover:underline" href={site.callUrl}>
+              {site.phone}
             </a>
           </p>
         </div>

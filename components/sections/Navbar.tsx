@@ -69,7 +69,7 @@ export default function Navbar() {
       }`}
     >
       <nav className="bg-site-gray/95 text-site-white relative flex items-center justify-between gap-4 rounded-full p-4 backdrop-blur-md md:py-5 md:pr-6 md:pl-8">
-        <a href="#top" className="flex items-center justify-center text-xl md:text-2xl" aria-label={`${site.name} home`}>
+        <a href="#top" className="flex items-center justify-center" aria-label={`${site.name} home`}>
           <Logo />
         </a>
 
@@ -117,7 +117,7 @@ export default function Navbar() {
               For Creators
             </a>
             <a
-              href={site.bookingUrl}
+              href={site.callUrl}
               className="bg-site-yellow text-site-theme-black animate-heartbeat hidden items-center justify-center rounded-full px-8 py-4 text-sm font-bold whitespace-nowrap xl:flex"
             >
               Book a Call
@@ -142,7 +142,7 @@ export default function Navbar() {
           </button>
         ))}
         <a
-          href={site.bookingUrl}
+          href={site.callUrl}
           onClick={() => setOpen(false)}
           className="bg-site-yellow text-site-theme-black mt-4 rounded-full px-10 py-4 font-bold"
         >

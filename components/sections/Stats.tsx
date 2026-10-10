@@ -23,7 +23,7 @@ export default function Stats() {
           </h3>
         </Reveal>
 
-        <div className="mt-14 grid grid-cols-2 gap-4 xl:grid-cols-4 xl:gap-6">
+        <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-3 xl:gap-6">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 90}>
               <div className="bg-site-gray group hover:bg-site-yellow h-full rounded-3xl px-4 py-6 transition-all duration-300 ease-in-out xl:rounded-4xl">
